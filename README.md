@@ -1,66 +1,66 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Nama Andya raihan setiawan
+Nim: 41522010157
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Deskripsi Proyek: Manajemen Produk dengan Laravel
+Proyek ini adalah aplikasi web sederhana yang dibangun menggunakan framework Laravel. Aplikasi ini bertujuan untuk mengelola produk, termasuk menampilkan daftar produk, menambah produk baru, mengedit produk yang sudah ada, dan menghapus produk.
 
-## About Laravel
+Struktur Kode
+1. Controller ProdukController
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Controller ProdukController bertanggung jawab untuk mengelola semua interaksi yang terkait dengan produk. Berikut adalah penjelasan untuk setiap metode:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ViewProduk: Menampilkan semua produk yang ada di database dengan memanggil model Produk dan mengirimkan data ke view produk.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+CreateProduk: Memvalidasi dan menyimpan produk baru ke database. Jika validasi berhasil, produk baru ditambahkan, dan pengguna akan diarahkan kembali dengan pesan sukses.
 
-## Learning Laravel
+ViewAddproduk: Menampilkan formulir untuk menambah produk baru.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+DeleteProduk: Menghapus produk dari database berdasarkan kode_produk yang diberikan. Setelah penghapusan, pengguna diarahkan kembali dengan pesan sukses.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+ViewEditProduk: Menampilkan formulir untuk mengedit produk berdasarkan kode_produk. Jika produk tidak ditemukan, pengguna akan mendapatkan pesan error.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+UpdateProduk: Memvalidasi dan memperbarui data produk yang ada. Jika produk ditemukan, data produk akan diperbarui, dan pengguna diarahkan kembali dengan pesan sukses.
 
-## Laravel Sponsors
+2. Rute Web
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Di dalam file web.php, rute-rute untuk aplikasi didefinisikan:
 
-### Premium Partners
+Rute untuk menampilkan halaman utama (/) dan dashboard (/dashboard).
+Rute untuk menampilkan daftar produk, menambah produk, memperbarui produk, dan menghapus produk menggunakan metode HTTP yang sesuai (GET, POST, PUT, DELETE).
+Teknologi yang Digunakan
+Laravel: Framework PHP yang digunakan untuk membangun aplikasi web ini.
+Blade: Template engine Laravel untuk memisahkan logika dan tampilan.
+Eloquent ORM: Digunakan untuk berinteraksi dengan database secara sederhana dan efisien.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Halaman Dashboard
+![dashboard](https://github.com/user-attachments/assets/363d3664-16ed-4769-ae97-f581e596aaff)
 
-## Contributing
+Halaman produk
+![Produk](https://github.com/user-attachments/assets/4cc737a8-a40b-4990-a0e5-2d000e7f19bd)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Form Untuk Edit produk Sebelum
+![Edit produk](https://github.com/user-attachments/assets/580970ac-97b2-4dca-bf42-4e9001b6be0a)
 
-## Code of Conduct
+Setelah di edit
+![setelah di edit](https://github.com/user-attachments/assets/7aeccd13-7cef-4971-a7c9-b30779c428ea)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Hapus
+![hapus](https://github.com/user-attachments/assets/0d7a12fd-8788-4d05-93d6-5c3d89335293)
 
-## Security Vulnerabilities
+Produk Berhasil di hapus
+![setelah di hapus](https://github.com/user-attachments/assets/6c202ae8-936f-43a4-8621-116cfca1b004)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Form Add Produk
+![add produk](https://github.com/user-attachments/assets/7151f21f-b1cd-4bea-abce-501d41581f5d)
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Setelah di Add
+![image](https://github.com/user-attachments/assets/fa0c0f56-995b-404c-814b-5cd8574834ad)
+
+
+
+
+
+
+
+
